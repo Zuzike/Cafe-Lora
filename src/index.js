@@ -1,5 +1,6 @@
 import './style.css';
 import { Layer } from './Layer/index.js';
+import { Drink } from './Drink/index.js';
 
 const navElm = document.querySelector('#nav-btn');
 const nav = document.querySelector('nav');
@@ -21,7 +22,7 @@ navContentArray.forEach((item) => {
 
 const orderBtn = document.querySelector('.order-btn');
 let order = false;
-
+/*
 orderBtn.addEventListener('click', () => {
   //console.log('1', order);
   if (order === false) {
@@ -57,7 +58,27 @@ const layers = [
 const layerElm = document.querySelector('.drink__info');
 /*for (let i = 0; i < layers.length; i += 1) {
   layerElm.innerHTML += Layer(layers[i]);
-}*/
+}
 layers.forEach((ite) => {
   layerElm.innerHTML += Layer(ite);
-});
+});*/
+
+const drink = {
+  id: 'romano',
+  name: 'Romano',
+  ordered: false,
+  layers: [
+    {
+      color: '#fbdf5b',
+      label: 'citrón',
+    },
+    {
+      color: '#613916',
+      label: 'espresso',
+    },
+  ],
+  image: 'https://apps.kodim.cz/daweb/cafelora/assets/cups/romano.png',
+};
+
+const drinksListElm = document.querySelector('.drinks-list');
+drinksListElm.appendChild(Drink(drink));

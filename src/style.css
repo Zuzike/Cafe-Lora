@@ -139,7 +139,7 @@ nav a:hover {
   margin: 0 auto 0 auto;
   text-align: center;
 }
-
+/*
 .drinks-list {
   display: flex;
   flex-flow: row wrap;
@@ -188,7 +188,7 @@ nav a:hover {
   margin-top: 1rem;
 
   text-align: center;
-}
+}*/
 
 .order-btn {
   padding: 0.5rem 1rem;
