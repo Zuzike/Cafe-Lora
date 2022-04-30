@@ -63,7 +63,7 @@ layers.forEach((ite) => {
   layerElm.innerHTML += Layer(ite);
 });*/
 
-const drink = {
+/*const drink = {
   id: 'romano',
   name: 'Romano',
   ordered: false,
@@ -81,4 +81,49 @@ const drink = {
 };
 
 const drinksListElm = document.querySelector('.drinks-list');
-drinksListElm.appendChild(Drink(drink));
+drinksListElm.appendChild(Drink(drink));*/
+
+const drinks = [
+  {
+    id: 'cappuccino',
+    name: 'Cappuccino',
+    ordered: false,
+    layers: [
+      {
+        color: '#feeeca',
+        label: 'mléčná pěna',
+      },
+      {
+        color: '#fed7b0',
+        label: 'teplé mléko',
+      },
+      {
+        color: '#613916',
+        label: 'espresso',
+      },
+    ],
+    image: 'https://apps.kodim.cz/daweb/cafelora/assets/cups/cappuccino.png',
+  },
+  {
+    id: 'romano',
+    name: 'Romano',
+    ordered: false,
+    layers: [
+      {
+        color: '#fbdf5b',
+        label: 'citrón',
+      },
+      {
+        color: '#613916',
+        label: 'espresso',
+      },
+    ],
+    image: 'https://apps.kodim.cz/daweb/cafelora/assets/cups/romano.png',
+  },
+];
+
+const drinksList = document.querySelector('.drinks-list');
+
+drinks.forEach((ite) => {
+  drinksList.appendChild(Drink(ite));
+});
