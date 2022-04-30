@@ -39,7 +39,7 @@ orderBtn.addEventListener('click', () => {
   }
 });
 
-const layerCappucino = [
+const layers = [
   {
     color: '#feeeca',
     label: 'mléčná, pěna',
@@ -55,7 +55,9 @@ const layerCappucino = [
 ];
 
 const layerElm = document.querySelector('.drink__info');
-
-for (let i = 0; i < layerCappucino.length; i += 1) {
-  layerElm.innerHTML += Layer(layerCappucino[i]);
-}
+/*for (let i = 0; i < layers.length; i += 1) {
+  layerElm.innerHTML += Layer(layers[i]);
+}*/
+layers.forEach((ite) => {
+  layerElm.innerHTML += Layer(ite);
+});
