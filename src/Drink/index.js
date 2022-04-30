@@ -28,5 +28,24 @@ export const Drink = (props) => {
     layerElm.innerHTML += Layer(ite);
   });
 
+  const orderBtn = drinkElm.querySelector('.order-btn');
+  let order = ordered;
+
+  orderBtn.addEventListener('click', () => {
+    if (order === false) {
+      orderBtn.textContent = `Zrušit`;
+      drinkElm
+        .querySelector('.drink__cup')
+        .classList.add('drink__cup--selected');
+      order = true;
+    } else {
+      orderBtn.textContent = `Objednat`;
+      drinkElm
+        .querySelector('.drink__cup')
+        .classList.remove('drink__cup--selected');
+      order = false;
+    }
+  });
+
   return drinkElm;
 };

@@ -1,5 +1,5 @@
 import './style.css';
-import { Layer } from './Layer/index.js';
+//import { Layer } from './Layer/index.js';
 import { Drink } from './Drink/index.js';
 
 const navElm = document.querySelector('#nav-btn');
@@ -20,9 +20,9 @@ navContentArray.forEach((item) => {
 });
 /*() => {hideNavigation()}//);});*/
 
-const orderBtn = document.querySelector('.order-btn');
+/*const orderBtn = document.querySelector('.order-btn');
 let order = false;
-/*
+
 orderBtn.addEventListener('click', () => {
   //console.log('1', order);
   if (order === false) {
