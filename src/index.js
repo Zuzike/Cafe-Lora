@@ -1,7 +1,17 @@
 import './style.css';
-const navElm = document.querySelector('#nav-btn')
+const navElm = document.querySelector('#nav-btn');
+const nav = document.querySelector('nav');
 
-navElm.addEventListener('click', ()=>{
-  const nav = document.querySelector('nav')
-nav.classList.toggle('nav-closed');
-})
+const hideNavigation =()=>{
+    nav.classList.toggle('nav-closed');
+}
+
+navElm.addEventListener('click',hideNavigation) /*() => {
+  hideNavigation()
+});*/
+
+const navContentArray = document.querySelectorAll('a');
+
+navContentArray.forEach((item) => {
+  item.addEventListener('click', hideNavigation)});
+  /*() => {hideNavigation()}//);});*/
