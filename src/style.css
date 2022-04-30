@@ -244,6 +244,9 @@ nav a:hover {
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
 }
 
 .contacts {
@@ -261,15 +264,13 @@ nav a:hover {
   height: auto;
 }
 
-.popisek{
-  width: 100vw;
-  height: 20vh;
+.popisek > p {
   background-color: rgb(176, 173, 173);
   opacity: 80%;
   color: black;
   text-align: center;
   font-size: 2rem;
-  padding: 3rem 0;
+  padding: 2rem 1rem;
   text-shadow: 2px 2px #ddd;
 }
 
@@ -321,7 +322,7 @@ nav a:hover {
   .drink {
     width: 33.333%;
   }
-  .nav-btn{
+  .nav-btn {
     display: none;
   }
 }
