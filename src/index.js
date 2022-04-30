@@ -83,7 +83,7 @@ layers.forEach((ite) => {
 const drinksListElm = document.querySelector('.drinks-list');
 drinksListElm.appendChild(Drink(drink));*/
 
-const drinks = [
+/*const drinks = [
   {
     id: 'cappuccino',
     name: 'Cappuccino',
@@ -126,4 +126,14 @@ const drinksList = document.querySelector('.drinks-list');
 
 drinks.forEach((ite) => {
   drinksList.appendChild(Drink(ite));
-});
+});*/
+
+fetch('https://apps.kodim.cz/daweb/cafelora/api/drinks')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    data.results.forEach((ite) =>
+      document.querySelector('.drinks-list').appendChild(Drink(ite)),
+    );
+  });
