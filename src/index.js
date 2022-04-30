@@ -1,4 +1,6 @@
 import './style.css';
+import { Layer } from './Layer/index.js';
+
 const navElm = document.querySelector('#nav-btn');
 const nav = document.querySelector('nav');
 
@@ -22,10 +24,10 @@ let order = false;
 
 orderBtn.addEventListener('click', () => {
   //console.log('1', order);
-  if (order === true) {
+  if (order === false) {
     orderBtn.textContent = `Zrušit`;
     document.querySelector('.drink__cup').classList.add('drink__cup--selected');
-    order = false;
+    order = true;
     //console.log('2', order);
   } else {
     //console.log('3', order);
@@ -33,6 +35,27 @@ orderBtn.addEventListener('click', () => {
     document
       .querySelector('.drink__cup')
       .classList.remove('drink__cup--selected');
-    order = true;
+    order = false;
   }
 });
+
+const layerCappucino = [
+  {
+    color: '#feeeca',
+    label: 'mléčná, pěna',
+  },
+  {
+    color: '#fed7b0',
+    label: 'teplé mléko',
+  },
+  {
+    color: '#613916',
+    label: 'espresso',
+  },
+];
+
+const layerElm = document.querySelector('.drink__info');
+
+for (let i = 0; i < layerCappucino.length; i += 1) {
+  layerElm.innerHTML += Layer(layerCappucino[i]);
+}
